@@ -12,6 +12,7 @@ use std::{
 /// Finds all occurrences of pattern in file by given path in parallel.
 #[derive(Parser)]
 #[command(name = "Finder", version)]
+#[command(override_usage = "finder --pattern <PATTERN> --path <FILE> [COMMAND]")]
 #[command(before_help = "It's better to use ripgrep :)")]
 #[command(after_help = "Author: @fselischev")]
 struct Args {
