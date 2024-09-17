@@ -23,5 +23,5 @@ fn main() {
         .lines()
         .enumerate()
         .filter(|(_, line)| line.as_ref().unwrap().contains(&args.pattern))
-        .for_each(|(num, line)| println!("{num}: {}", line.unwrap()));
+        .for_each(|(num, line)| println!("{}: {}", num + 1, line.unwrap()));
 }
