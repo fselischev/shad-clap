@@ -2,7 +2,7 @@ use clap::{Parser, Subcommand};
 use colored::Colorize;
 use rayon::iter::{IntoParallelRefIterator, ParallelIterator};
 use std::{
-    fs,
+    env, fs,
     io::{BufRead, BufReader},
     path::PathBuf,
 };
@@ -21,7 +21,7 @@ struct Args {
     /// Pattern to be found.
     ///
     /// Arbitrary string value that will be searched in files.
-    #[arg(long)]
+    #[arg(long, short = 'p')]
     pattern: String,
     /// File path where to search pattern occurrences.
     #[arg(long = "path")]
